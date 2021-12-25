@@ -1,5 +1,5 @@
 import Head from "next/head";
-import type { GetStaticPaths, GetStaticPropsResult, GetStaticPropsContext } from "next";
+import type { GetStaticPaths, GetStaticPropsResult, GetStaticPropsContext, GetStaticPathsResult } from "next";
 import { ThemeProvider } from "styled-components";
 import { ProfileModel } from "@/src/domain/models";
 import { ProfileLayout } from "@/src/presentation/pages";
@@ -19,7 +19,7 @@ const Profile: React.FC<ProfileModel> = (props) => {
 
 export default Profile;
 
-export const getStaticPaths: GetStaticPaths = async (ctx) => {
+export async function getStaticPaths(): Promise<GetStaticPathsResult> {
     return {
         paths: [
             {
@@ -30,9 +30,9 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
         ],
         fallback: true,
     };
-};
+}
 
-export async function getStaticProps(context: GetStaticPropsContext): Promise<GetStaticPropsResult<ProfileModel>> {
+export async function getStaticProps(): Promise<GetStaticPropsResult<ProfileModel>> {
     const data: ProfileModel = {
         name: "Gabriel Santini",
         description:
