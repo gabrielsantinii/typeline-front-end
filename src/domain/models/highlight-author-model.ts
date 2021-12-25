@@ -1,7 +1,7 @@
 export type HighlightAuthorModel = {
     name: string;
     username: string;
-    backgroundUrl: string;
+    bannerUrl: string;
     avatarUrl: string;
     description: string;
     likesCount: number;

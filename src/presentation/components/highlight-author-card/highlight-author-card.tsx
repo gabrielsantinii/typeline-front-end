@@ -1,3 +1,4 @@
+import { HighlightAuthorModel } from "@/src/domain/models";
 import { Avatar } from "@/src/presentation/components";
 import {
     Container,
@@ -12,21 +13,11 @@ import {
     CountDescription,
 } from "./highlight-author-card-styles";
 
-type Props = {
-    name: string;
-    username: string;
-    description: string;
-    followersCount: number;
-    likesCount: number;
-    avatarUrl: string;
-    bannerUrl: string;
-};
-
-export function HighlightAuthorCard(props: Props) {
+export function HighlightAuthorCard(props: HighlightAuthorModel) {
     return (
         <Container className="highlight-author-card">
-            <Banner>
-                <Avatar />
+            <Banner src={props.bannerUrl}>
+                <Avatar src={props.avatarUrl} />
             </Banner>
 
             <ProfileInfos className="profile-infos">
