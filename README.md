@@ -1,34 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Typeline - Next.js, Typescript e Styled Components
 
-## Getting Started
+Este tutorial visa ajudá-lo, na prática, a construir um projeto utilizando as tecnologias de ponta: Next.js, Typescript e Styled Components.
 
-First, run the development server:
+Para isso, faremos juntos uma rede social chamada Typeline. Nela, autores poderão discutir tudo relacionado a Typescript.
+
+Com o objetivo de trilharmos esse caminho, dividimos esse tutorial em cinco principais capítulos:
+
+- Configuração;
+- Desenvolvimento;
+- Refatoração;
+- Publicação;
+- Revisão.
+
+---
+
+# Configuração
+
+Aqui veremos a parte estrutural da aplicação. Neste capítulo, você entenderá como inicializar projetos Next.js utilizando Typescript e Styled Components. 
+
+É importante deixar claro que haverão novas configurações pontuais com o desenvolvimento do projeto. Lembre-se: You Ain't Gonna Need It [(YAGNI)](https://pt.wikipedia.org/wiki/YAGNI)
+
+## Inicialização com Typescript
+
+O primeiro passo é a inicialização do App com `create-next-app`. Abra seu terminal e digite o seguinte comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
+yarn create next-app nome-da-aplicacao --typescript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalação do Styled Components
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Styled Components será nossa base para a estilização do projeto. Para tanto, precisamos instalá-lo.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+yarn add styled-components && yarn add @types/styled-components -D
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+> Obs: todas as dependências `@types` serão relacionadas a utilização da dependência integrada ao `Typescript`.
+> 
 
-## Learn More
+## Configuração do Styled Components
 
-To learn more about Next.js, take a look at the following resources:
+Pelo `Next.js` trabalhar com SSR, precisamos de algumas configurações adicionais no Styled Components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Adicionar o `babel-plugin-styled-components` como dependência de desenvolvimento.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+yarn add babel-plugin-styled-components -D
+```
 
-## Deploy on Vercel
+1. Configurar o Next.js para receber a estilização em SSR.
+    1. Crie o arquivo `_document.tsx` na pasta `pages`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```tsx
+import Document, { DocumentContext } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+export default class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
+  }
+}
+```
+
+## Conclusão - Configuração
+
+Até o momento, realizamos a parte de configuração, que não envolve conceito ou algo do gênero, mas apenas prepara nosso ambiente para podermos decolar.
