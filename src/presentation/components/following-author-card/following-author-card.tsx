@@ -1,13 +1,10 @@
+import { FollowingAuthorModel } from "@/src/domain/models";
 import { Avatar } from "@/src/presentation/components";
 import Link from "next/link";
-import { Container, AvatarContainer, ProfileInfos, Subtitle, Title } from "./author-card-styles";
 
-type Props = {
-    name: string;
-    username: string;
-};
+import { Container, AvatarContainer, ProfileInfos, Subtitle, Title } from "./following-author-card-styles";
 
-export function AuthorCard({ name, username }: Props) {
+export function FollowingAuthorCard({ name, username }: FollowingAuthorModel) {
     return (
         <Link href={`/profiles/${username}`}>
             <Container className="author-card">

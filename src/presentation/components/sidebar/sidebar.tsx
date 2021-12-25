@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Avatar, AuthorCard } from "@/src/presentation/components";
+import { Avatar, FollowingAuthorCard } from "@/src/presentation/components";
 
 import {
     Container,
@@ -36,18 +36,18 @@ export default function Sidebar() {
                 <MainAuthorsHeader>Principais autores seguidos</MainAuthorsHeader>
 
                 <MainAuthorsContent>
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
-                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
+                    <FollowingAuthorCard avatarUrl="" name="Gabriel Santini" username="gabrielsantini" />
                 </MainAuthorsContent>
             </MainAuthorsContainer>
             <LogoutContainer>

@@ -1,6 +1,6 @@
 export * from "./avatar";
 export * from "./page-container";
-export * from "./author-card";
+export * from "./following-author-card";
 export * from "./sidebar";
 export * from "./header";
 export * from "./post"
