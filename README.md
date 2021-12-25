@@ -8,6 +8,10 @@ Com o objetivo de trilharmos esse caminho, dividimos esse tutorial em cinco prin
 
 - Configuração;
 - Desenvolvimento;
+-   1. Presentation;
+-   2. Domain;
+-   3. Data;
+-   4. Infra.
 - Refatoração;
 - Publicação;
 - Revisão.
