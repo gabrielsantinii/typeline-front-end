@@ -25,7 +25,7 @@ Aqui veremos a parte estrutural da aplicação. Neste capítulo, você entender�
 O primeiro passo é a inicialização do App com `create-next-app`. Abra seu terminal e digite o seguinte comando:
 
 ```bash
-yarn create next-app nome-da-aplicacao --typescript
+yarn create next-app typeline-front-end --typescript
 ```
 
 ## Instalação do Styled Components
@@ -88,3 +88,5 @@ export default class MyDocument extends Document {
 ## Conclusão - Configuração
 
 Até o momento, realizamos a parte de configuração, que não envolve conceito ou algo do gênero, mas apenas prepara nosso ambiente para podermos decolar.
+
+---
