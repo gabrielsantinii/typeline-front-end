@@ -1,5 +1,5 @@
 import Head from "next/head";
-import type { GetStaticPaths, GetStaticPropsResult, GetStaticPropsContext, GetStaticPathsResult } from "next";
+import type { GetStaticPropsResult, GetStaticPathsResult } from "next";
 import { ThemeProvider } from "styled-components";
 import { ProfileModel } from "@/src/domain/models";
 import { ProfileLayout } from "@/src/presentation/pages";
