@@ -4,8 +4,8 @@ import {
     SectionHeader,
     PostsWrapper,
     Post,
-    HighlightAuthorsWrapper,
-    HighlightAuthorCard,
+    RecommendedAuthorsWrapper,
+    RecommendedAuthorCard,
 } from "@/src/presentation/components";
 import { SearchInput } from "../../components/search-input";
 import { SearchSection, Wrapper } from "./explore-layout-styles";
@@ -36,8 +36,8 @@ export const ExploreLayout: React.FC<{}> = ({}) => {
                 </Section>
                 <Section>
                     <SectionHeader>Autores recomendados para você</SectionHeader>
-                    <HighlightAuthorsWrapper>
-                        <HighlightAuthorCard
+                    <RecommendedAuthorsWrapper>
+                        <RecommendedAuthorCard
                             name="Gabriel Santini"
                             username="gabrielsantini"
                             description="sadasd"
@@ -46,7 +46,7 @@ export const ExploreLayout: React.FC<{}> = ({}) => {
                             followersCount={10}
                             likesCount={233}
                         />
-                        <HighlightAuthorCard
+                        <RecommendedAuthorCard
                             name="Gabriel Santini"
                             username="gabrielsantini"
                             description="sadasd"
@@ -55,7 +55,7 @@ export const ExploreLayout: React.FC<{}> = ({}) => {
                             followersCount={10}
                             likesCount={233}
                         />
-                        <HighlightAuthorCard
+                        <RecommendedAuthorCard
                             name="Gabriel Santini"
                             username="gabrielsantini"
                             description="sadasdasd asdasd asdasdaasasd asdasdasdas sadasdasd asd asdad asd assadasdasdads"
@@ -64,7 +64,7 @@ export const ExploreLayout: React.FC<{}> = ({}) => {
                             followersCount={10}
                             likesCount={233}
                         />
-                    </HighlightAuthorsWrapper>
+                    </RecommendedAuthorsWrapper>
                 </Section>
             </Wrapper>
         </PageContainer>

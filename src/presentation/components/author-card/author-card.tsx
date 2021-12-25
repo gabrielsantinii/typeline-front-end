@@ -1,4 +1,5 @@
 import { Avatar } from "@/src/presentation/components";
+import Link from "next/link";
 import { Container, AvatarContainer, ProfileInfos, Subtitle, Title } from "./author-card-styles";
 
 type Props = {
@@ -8,15 +9,17 @@ type Props = {
 
 export function AuthorCard({ name, username }: Props) {
     return (
-        <Container className="author-card">
-            <AvatarContainer>
-                <Avatar />
-            </AvatarContainer>
+        <Link href={`/profiles/${username}`}>
+            <Container className="author-card">
+                <AvatarContainer>
+                    <Avatar />
+                </AvatarContainer>
 
-            <ProfileInfos className="profile-infos">
-                <Title className="title">{name}</Title>
-                <Subtitle>{username}</Subtitle>
-            </ProfileInfos>
-        </Container>
+                <ProfileInfos className="profile-infos">
+                    <Title className="title">{name}</Title>
+                    <Subtitle>@{username}</Subtitle>
+                </ProfileInfos>
+            </Container>
+        </Link>
     );
 }

@@ -6,6 +6,6 @@ export * from "./header";
 export * from "./post"
 export * from './posts-wrapper'
 export * from './section'
-export * from './highlight-authors-wrapper'
-export * from './highlight-author-card'
+export * from './recommended-authors-wrapper'
+export * from './recommended-author-card'
 export * from './search-input'

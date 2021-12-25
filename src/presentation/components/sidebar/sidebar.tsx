@@ -36,18 +36,18 @@ export default function Sidebar() {
                 <MainAuthorsHeader>Principais autores</MainAuthorsHeader>
 
                 <MainAuthorsContent>
-                    <AuthorCard name="Zasso Brasil" username="69.002.673/0001-87" />
-                    <AuthorCard name="CEM Executive" username="20.816.335/0001-90" />
-                    <AuthorCard name="VOCOM" username="38.142.641/0001-53" />
-                    <AuthorCard name="Zasso Brasil" username="69.002.673/0001-87" />
-                    <AuthorCard name="CEM Executive" username="20.816.335/0001-90" />
-                    <AuthorCard name="VOCOM" username="38.142.641/0001-53" />
-                    <AuthorCard name="Zasso Brasil" username="69.002.673/0001-87" />
-                    <AuthorCard name="CEM Executive" username="20.816.335/0001-90" />
-                    <AuthorCard name="VOCOM" username="38.142.641/0001-53" />
-                    <AuthorCard name="Zasso Brasil" username="69.002.673/0001-87" />
-                    <AuthorCard name="CEM Executive" username="20.816.335/0001-90" />
-                    <AuthorCard name="VOCOM" username="38.142.641/0001-53" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
+                    <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
                 </MainAuthorsContent>
             </MainAuthorsContainer>
             <LogoutContainer>

@@ -1,3 +1,3 @@
 export * from './post-model'
 export * from './profile-model'
-export * from './highlight-author-model'
+export * from './recommended-author-model'

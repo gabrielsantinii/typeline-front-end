@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const HighlightAuthorsWrapper = styled.div`
+export const RecommendedAuthorsWrapper = styled.div`
     display: flex;
     flex-direction: column;
 
-    > .highlight-author-card + .highlight-author-card {
+    > .recommended-author-card + .recommended-author-card {
         margin-top: 15px;
     }
 
@@ -14,7 +14,7 @@ export const HighlightAuthorsWrapper = styled.div`
         justify-content: space-between;
         width: 100%;
 
-        > .highlight-author-card + .highlight-author-card {
+        > .recommended-author-card + .recommended-author-card {
             margin-top: 0px;
         }
     }

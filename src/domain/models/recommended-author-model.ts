@@ -1,4 +1,4 @@
-export type HighlightAuthorModel = {
+export type RecommendedAuthorModel = {
     name: string;
     username: string;
     bannerUrl: string;

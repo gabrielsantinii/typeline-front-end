@@ -1,4 +1,4 @@
-import { HighlightAuthorModel } from "@/src/domain/models";
+import { RecommendedAuthorModel } from "@/src/domain/models";
 import { Avatar } from "@/src/presentation/components";
 import {
     Container,
@@ -11,11 +11,11 @@ import {
     CountContainer,
     CountValue,
     CountDescription,
-} from "./highlight-author-card-styles";
+} from "./recommended-author-card-styles";
 
-export function HighlightAuthorCard(props: HighlightAuthorModel) {
+export function RecommendedAuthorCard(props: RecommendedAuthorModel) {
     return (
-        <Container className="highlight-author-card">
+        <Container className="recommended-author-card">
             <Banner src={props.bannerUrl}>
                 <Avatar src={props.avatarUrl} />
             </Banner>
