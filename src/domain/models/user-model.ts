@@ -5,5 +5,5 @@ export type UserModel = {
     name: string;
     username: string;
     avatarUrl: string;
-    mainFollowingAuthors: FollowingAuthorModel;
+    mainFollowingAuthors: FollowingAuthorModel[];
 };
