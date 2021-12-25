@@ -1,3 +1,7 @@
+<div display="flex" align="center" position="relative">
+    <img src="https://raw.githubusercontent.com/gabrielsantinii/typeline-front-end/main/assets/background.jpeg?raw=true"  alt="Next.js, Typescript e Styled Components" width="100%" />
+ </div>
+
 # Typeline - Next.js, Typescript e Styled Components
 
 Este tutorial visa ajudá-lo, na prática, a construir um projeto utilizando as tecnologias de ponta: Next.js, Typescript e Styled Components.
