@@ -3,4 +3,5 @@ export interface PostModel {
   username: string;
   postedAt: Date;
   contentDescription: string;
+  liked: boolean;
 }

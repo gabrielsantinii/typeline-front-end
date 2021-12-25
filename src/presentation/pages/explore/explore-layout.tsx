@@ -25,12 +25,14 @@ export const ExploreLayout: React.FC<{}> = ({}) => {
                             postedAt={new Date()}
                             username="gabrielsantini"
                             contentDescription="sadasd"
+                            liked={false}
                         />
                         <Post
                             name="Gabriel Santini"
                             postedAt={new Date()}
                             username="gabrielsantini"
                             contentDescription="Lorem ipsum dolor sit amet, consectetur adipiscing el aspect et dolor. Cum sociis natoque penatibus et just  euismod. Lorem ipsum dolor sit amet"
+                            liked={false}
                         />
                     </PostsWrapper>
                 </Section>
