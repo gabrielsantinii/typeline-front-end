@@ -33,7 +33,7 @@ export default function Sidebar() {
             </MenuContainer>
 
             <MainAuthorsContainer>
-                <MainAuthorsHeader>Principais autores</MainAuthorsHeader>
+                <MainAuthorsHeader>Principais autores seguidos</MainAuthorsHeader>
 
                 <MainAuthorsContent>
                     <AuthorCard name="Gabriel Santini" username="gabrielsantini" />
